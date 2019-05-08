@@ -20,7 +20,7 @@
 		</dependency>
 	</dependencies>
 			<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
+		<artifactId>spring-boot-starter-web</artifactId>
 		<version>2.1.4.RELEASE</version>
   <dependencyManagement>
         <dependencies>
