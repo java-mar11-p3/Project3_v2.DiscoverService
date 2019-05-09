@@ -1,22 +1,24 @@
 pipeline {
-   agent {
+   agent any
+   /*agent {
       docker {
          label 'docker'
          image 'maven:3-alpine'
       }
-   }
+   }*/
    stages {
-      stage('Preparation') {
+      /*stage('Preparation') {
          steps {
             sh 'mvn clean'
          }
-      }
+      }*/
       stage('Compile') {
          steps {
-            sh 'mvn compile'
+            //sh 'mvn compile'
+            sh 'mvn clean package'
          }
       }
-      stage('Deploy') {
+      /*stage('Deploy') {
          steps {
             sh 'mvn package'
          }
@@ -26,6 +28,6 @@ pipeline {
             sh 'docker build -t sebenner/project_03:discover -f Dockerfile'
             sh 'docker push sebenner/project_03:discover'
          }
-      }
+      }*/
    }
 }
