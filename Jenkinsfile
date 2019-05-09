@@ -1,11 +1,11 @@
 pipeline {
-   agent any
-   /*agent {
+   //agent any
+   agent {
       docker {
          label 'docker'
          image 'maven:3-alpine'
       }
-   }*/
+   }
    stages {
       /*stage('Preparation') {
          steps {
