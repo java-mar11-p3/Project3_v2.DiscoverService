@@ -1,5 +1,8 @@
 pipeline {
-   agent any
+   agent {
+      label 'docker'
+      image 'maven:3-alpine'
+   }
    stages {
       stage('Preparation') {
          steps {
