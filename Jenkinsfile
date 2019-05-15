@@ -8,7 +8,7 @@ pipeline {
       }
       stage('Docker') {
          steps {
-            sh 'docker build -t sebenner/project_03'
+            sh 'docker build -t sebenner/project_03 .'
          }
       }
       /*stage('Deploy') {
