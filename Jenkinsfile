@@ -8,7 +8,10 @@ pipeline {
       }
       stage('Docker') {
          steps {
-            sh 'sudo docker build -t sebenner/project_03 .'
+            sh 'sudo docker build -t sebenner/project_03:discover-service .'
+            sh 'sudo docker push sebenner/project_03:discover-service'
+            sh 'sudo docker run discover-service'
+            sh 'sudo docker image ls'
          }
       }
       /*stage('Deploy') {
