@@ -1,5 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: com.java.Main
 Implementation-Title: Project3_v2.DiscoverService Maven Webapp
 Implementation-Version: 2.1.4.RELEASE
 Built-By: steve
