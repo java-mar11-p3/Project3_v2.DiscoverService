@@ -6,6 +6,11 @@ pipeline {
             sh 'mvn clean package'
          }
       }
+      stage('Install') {
+         steps {
+            sh 'mvn install'
+         }
+      }
       stage('Docker') {
          steps {
             sh 'sudo docker build -t sebenner/project_03:discover-service .'
